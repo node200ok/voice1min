@@ -2,8 +2,8 @@
 var path = require('path'),
     hostUrl = 'http://voice1min.duapp.com',
     rootDir = path.resolve(__dirname, '..'),
-    publicDir = rootDir + '/public',
-    voiceDir = publicDir + '/voice',
+    publicDir = path.resolve(rootDir, '/public'),
+    voiceDir = path.resolve(publicDir + '/voice'),
     pubVoiceDir = voiceDir.replace(publicDir, hostUrl);
 
 module.exports = {
